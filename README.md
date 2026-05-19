@@ -54,39 +54,36 @@ compress ~/Documents/Report.pdf 2
 
 Output:
 ```
-⏳ Starting compression of "Report.pdf" with quality setting: 2 (Recommended compression, Good quality)...
-✅ Compressed file: Report_compressed.pdf | Original size: 6.3M | Compressed size: 452K
+⏳ Compressing "Report.pdf" with quality 2 (Recommended compression, Good quality)...
+✅ Report_compressed.pdf | Original: 6.3M → 452K
 ```
 
 ---
 
-## 💡 Zsh Alias (Optional)
+## 📦 Installation
 
-You can create an alias to use `compress` from anywhere in your terminal:
-
-1. Open your `.zshrc`:
+**Option 1: Direct usage**
 ```bash
-nano ~/.zshrc
+bash /path/to/compress_pdf.sh document.pdf 2
 ```
 
-2. Add the following line (update the path if needed):
+**Option 2: Add to PATH (recommended)**
 ```bash
-alias compress="/full/path/to/your/script.sh"
+# Copy script to a directory in your PATH
+cp compress_pdf.sh /usr/local/bin/compress
+chmod +x /usr/local/bin/compress
+
+# Now use from anywhere
+compress ~/Documents/report.pdf 2
 ```
 
-For example:
+**Option 3: Zsh alias**
 ```bash
-alias compress="/Users/yourname/scripts/pdf_compress.sh"
-```
+# Add to your ~/.zshrc
+alias compress='/path/to/compress_pdf.sh'
 
-3. Save and reload your terminal:
-```bash
+# Reload
 source ~/.zshrc
-```
-
-Then just run:
-```bash
-compress myfile.pdf 2
 ```
 
 ---
